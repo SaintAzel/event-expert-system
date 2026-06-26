@@ -1,22 +1,3 @@
-from fastapi import FastAPI
+from .app import create_app
 
-app = FastAPI(
-    title="Event Expert System API",
-    description="Expert System for Event Readiness Assessment",
-    version="1.0.0",
-)
-
-
-@app.get("/")
-async def root():
-    return {
-        "message": "Event Expert System API",
-        "version": "1.0.0",
-    }
-
-
-@app.get("/health")
-async def health():
-    return {
-        "status": "ok",
-    }
+app = create_app()
