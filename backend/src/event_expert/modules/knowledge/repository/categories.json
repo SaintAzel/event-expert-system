@@ -1,0 +1,17 @@
+{
+  "metadata": {
+    "version":"1.0.0",
+    "knowledge_version":"1.0.0",
+    "description":"Knowledge Categories"
+  },
+
+  "data":[
+
+    {
+      "id":"C01",
+      "name":"Perizinan",
+      "priority":"critical"
+    }
+
+  ]
+}

@@ -1,0 +1,17 @@
+{
+"id":"CR001",
+
+"priority":"critical",
+
+"conditions":[
+
+"F001",
+
+"F002",
+
+"F005"
+
+],
+
+"conclusion":"RC01"
+}

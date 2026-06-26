@@ -1,0 +1,13 @@
+{
+  "id":"F001",
+
+  "category":"C01",
+
+  "business_rule":"BR-C01-001",
+
+  "name":"Izin keramaian telah diterbitkan",
+
+  "critical":true,
+
+  "evidence":"Surat izin keramaian"
+}
