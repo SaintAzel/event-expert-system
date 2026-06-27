@@ -36,58 +36,46 @@ class KnowledgeLoader:
         self.validator = validator
 
     # ======================================================
+    # Internal Helpers
+    # ======================================================
+
+    def _ensure_validated(self) -> None:
+        """
+        Ensure that the repository has already been validated
+        and every required repository has been loaded.
+        """
+
+        required_repositories = {
+            "metadata": self.validator.metadata,
+            "categories": self.validator.categories,
+            "facts": self.validator.facts,
+            "criteria": self.validator.criteria,
+            "decisions": self.validator.decisions,
+            "recommendations": self.validator.recommendations,
+            "category_rules": self.validator.category_rules,
+            "global_rules": self.validator.global_rules,
+        }
+
+        for repository_name, repository in required_repositories.items():
+
+            if repository is None:
+
+                raise RepositoryLoadingError(
+                    f"{repository_name.capitalize()} repository "
+                    "has not been loaded. "
+                    "Make sure validator.validate() is called "
+                    "before loader.load()."
+                )
+    # ======================================================
     # Public API
     # ======================================================
 
     def load(self) -> KnowledgeBase:
         """
-        Build and return a KnowledgeBase instance.
-
-        Returns
-        -------
-        KnowledgeBase
-            Fully populated knowledge base.
+        Build and return a validated KnowledgeBase.
         """
 
-        if self.validator.metadata is None:
-            raise RepositoryLoadingError(
-                "Repository has not been validated."
-            )
-
-        if self.validator.categories is None:
-            raise RepositoryLoadingError(
-                "Categories repository is unavailable."
-            )
-
-        if self.validator.facts is None:
-            raise RepositoryLoadingError(
-                "Facts repository is unavailable."
-            )
-
-        if self.validator.criteria is None:
-            raise RepositoryLoadingError(
-                "Criteria repository is unavailable."
-            )
-
-        if self.validator.decisions is None:
-            raise RepositoryLoadingError(
-                "Decisions repository is unavailable."
-            )
-
-        if self.validator.recommendations is None:
-            raise RepositoryLoadingError(
-                "Recommendations repository is unavailable."
-            )
-
-        if self.validator.category_rules is None:
-            raise RepositoryLoadingError(
-                "Category Rules repository is unavailable."
-            )
-
-        if self.validator.global_rules is None:
-            raise RepositoryLoadingError(
-                "Global Rules repository is unavailable."
-            )
+        self._ensure_validated()
 
         return KnowledgeBase(
             metadata=self.validator.metadata,
