@@ -333,3 +333,69 @@ class KnowledgeBase(KnowledgeBaseModel):
     category_rules: CategoryRuleRepository
 
     global_rules: GlobalRuleRepository
+    
+
+# ==========================================================
+# Runtime Inference Models
+# ==========================================================
+
+
+class MatchedRule(KnowledgeBaseModel):
+    """
+    Rule that successfully matched during inference.
+    """
+
+    id: CategoryRuleId | GlobalRuleId = Field(
+        ...,
+        description="Rule identifier (CRxxx or GRxxx)."
+    )
+
+    rule_type: Literal[
+        "category",
+        "global",
+    ]
+
+    conditions: list[FactId | CriteriaId] = Field(
+        default_factory=list,
+        description="Conditions evaluated by this rule."
+    )
+
+    conclusion: CriteriaId | DecisionId = Field(
+        ...,
+        description="Criteria ID or Decision ID produced."
+    )
+
+
+class InferenceResult(KnowledgeBaseModel):
+    """
+    Final inference result produced by the
+    Forward Chaining Engine.
+
+    This object is shared between:
+
+    - Forward Chaining Engine
+    - Explanation Engine
+    - Recommendation Engine
+    - REST API
+    """
+    success: bool = True
+    
+    decision: Decision
+
+    matched_criteria: list[Criteria] = Field(
+        default_factory=list
+    )
+
+    matched_rules: list[MatchedRule] = Field(
+        default_factory=list
+    )
+
+    triggered_facts: list[Fact] = Field(
+        default_factory=list
+    )
+
+    execution_time_ms: float = Field(
+        default=0.0,
+        ge=0,
+        description="Inference execution time."
+    )
