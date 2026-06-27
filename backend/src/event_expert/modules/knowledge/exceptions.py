@@ -1,23 +1,31 @@
 """
-Knowledge Module Exceptions
-===========================
+Knowledge Exceptions
+====================
 
-Custom exception hierarchy used throughout the
-Knowledge Module.
+Domain-specific exceptions for the
+Event Expert System.
 
-Every component should raise one of these exceptions
-instead of using built-in RuntimeError or ValueError.
+These exceptions are raised by the
+Knowledge, Inference, Explanation,
+Recommendation, Evaluation, and
+Expert System modules.
+
+This module MUST NOT depend on
+FastAPI or any HTTP-related package.
 """
 
 from __future__ import annotations
 
 
+# ==========================================================
+# Base Exception
+# ==========================================================
+
+
 class KnowledgeError(Exception):
     """
-    Base exception for the Knowledge Module.
+    Base exception for the Event Expert System.
     """
-
-    pass
 
 
 # ==========================================================
@@ -25,93 +33,79 @@ class KnowledgeError(Exception):
 # ==========================================================
 
 
-class RepositoryError(KnowledgeError):
+class RepositoryLoadingError(KnowledgeError):
     """
-    Base exception for repository-related errors.
-    """
-
-    pass
-
-
-class RepositoryNotFoundError(RepositoryError):
-    """
-    Raised when the knowledge repository
-    or one of its files cannot be found.
+    Raised when a knowledge repository
+    cannot be loaded.
     """
 
-    pass
 
-
-class RepositoryValidationError(RepositoryError):
+class RepositoryValidationError(KnowledgeError):
     """
-    Raised when repository validation fails.
-    """
-
-    pass
-
-
-class RepositoryLoadingError(RepositoryError):
-    """
-    Raised when repository loading fails.
+    Raised when the repository contains
+    invalid or inconsistent knowledge.
     """
 
-    pass
+
+class KnowledgeBaseNotInitializedError(KnowledgeError):
+    """
+    Raised when attempting to access the
+    KnowledgeBase before it has been loaded.
+    """
 
 
 # ==========================================================
-# Knowledge Base Exceptions
+# Inference Exceptions
 # ==========================================================
 
 
-class KnowledgeBaseError(KnowledgeError):
+class ForwardChainingError(KnowledgeError):
     """
-    Base exception related to the in-memory Knowledge Base.
+    Raised when no inference result
+    can be produced.
     """
-
-    pass
-
-
-class KnowledgeBaseNotInitializedError(KnowledgeBaseError):
-    """
-    Raised when the Knowledge Base has not yet been loaded.
-    """
-
-    pass
 
 
 # ==========================================================
-# Inference Engine Exceptions
+# Explanation Exceptions
 # ==========================================================
 
 
-class InferenceEngineError(KnowledgeError):
-    """
-    Base exception for inference engine failures.
-    """
-
-    pass
-
-
-class ForwardChainingError(InferenceEngineError):
-    """
-    Raised when an error occurs during
-    Forward Chaining inference.
-    """
-
-    pass
-
-
-class ExplanationEngineError(InferenceEngineError):
+class ExplanationError(KnowledgeError):
     """
     Raised when explanation generation fails.
     """
 
-    pass
+
+# ==========================================================
+# Recommendation Exceptions
+# ==========================================================
 
 
-class RecommendationEngineError(InferenceEngineError):
+class RecommendationError(KnowledgeError):
     """
     Raised when recommendation generation fails.
     """
 
-    pass
+
+# ==========================================================
+# Evaluation Exceptions
+# ==========================================================
+
+
+class EvaluationError(KnowledgeError):
+    """
+    Raised when evaluation generation fails.
+    """
+
+
+# ==========================================================
+# Expert System Exceptions
+# ==========================================================
+
+
+class ExpertSystemError(KnowledgeError):
+    """
+    Raised when the complete expert system
+    execution fails.
+    """
