@@ -1,17 +1,44 @@
 {
-  "metadata": {
-    "version":"1.0.0",
-    "knowledge_version":"1.0.0",
-    "description":"Knowledge Categories"
-  },
-
-  "data":[
-
+  "data": [
     {
-      "id":"C01",
-      "name":"Perizinan",
-      "priority":"critical"
+      "id": "C01",
+      "name": "Perizinan",
+      "priority": "critical"
+    },
+    {
+      "id": "C02",
+      "name": "Venue",
+      "priority": "critical"
+    },
+    {
+      "id": "C03",
+      "name": "Sumber Daya Manusia",
+      "priority": "high"
+    },
+    {
+      "id": "C04",
+      "name": "Keamanan",
+      "priority": "critical"
+    },
+    {
+      "id": "C05",
+      "name": "Medis",
+      "priority": "critical"
+    },
+    {
+      "id": "C06",
+      "name": "Logistik",
+      "priority": "high"
+    },
+    {
+      "id": "C07",
+      "name": "Operasional",
+      "priority": "high"
+    },
+    {
+      "id": "C08",
+      "name": "Komunikasi",
+      "priority": "medium"
     }
-
   ]
 }

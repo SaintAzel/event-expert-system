@@ -1,11 +1,15 @@
 {
-    "metadata": {
-        "version":"1.0.0",
-        "knowledge_version":"1.0.0",
-        "author":"Ahmad Guffran",
-        "description":"",
-        "last_updated":"2026-06-27"
-    },
-
-    "data":[]
+  "knowledge_version": "1.0.0",
+  "method": "Forward Chaining",
+  "author": "Ahmad Guffran",
+  "last_updated": "2026-06-27",
+  "statistics": {
+    "categories": 8,
+    "facts": 40,
+    "criteria": 8,
+    "category_rules": 8,
+    "global_rules": 6,
+    "decisions": 3,
+    "recommendations": 8
+  }
 }

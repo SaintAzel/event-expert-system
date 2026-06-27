@@ -1,7 +1,60 @@
 {
-"id":"RC01",
-
-"name":"Perizinan Lengkap",
-
-"category":"C01"
+  "data": [
+    {
+      "id": "RC01",
+      "category": "C01",
+      "name": "Perizinan Lengkap",
+      "description": "Seluruh dokumen perizinan telah dipenuhi.",
+      "priority": "critical"
+    },
+    {
+      "id": "RC02",
+      "category": "C02",
+      "name": "Venue Siap",
+      "description": "Venue memenuhi standar penyelenggaraan event.",
+      "priority": "critical"
+    },
+    {
+      "id": "RC03",
+      "category": "C03",
+      "name": "SDM Memadai",
+      "description": "Panitia memiliki struktur organisasi yang lengkap.",
+      "priority": "high"
+    },
+    {
+      "id": "RC04",
+      "category": "C04",
+      "name": "Keamanan Memadai",
+      "description": "Aspek keamanan telah memenuhi standar.",
+      "priority": "critical"
+    },
+    {
+      "id": "RC05",
+      "category": "C05",
+      "name": "Medis Memadai",
+      "description": "Fasilitas medis tersedia.",
+      "priority": "critical"
+    },
+    {
+      "id": "RC06",
+      "category": "C06",
+      "name": "Logistik Siap",
+      "description": "Seluruh logistik utama telah tersedia.",
+      "priority": "high"
+    },
+    {
+      "id": "RC07",
+      "category": "C07",
+      "name": "Operasional Siap",
+      "description": "Operasional event siap dijalankan.",
+      "priority": "high"
+    },
+    {
+      "id": "RC08",
+      "category": "C08",
+      "name": "Komunikasi Siap",
+      "description": "Komunikasi internal dan eksternal berjalan baik.",
+      "priority": "medium"
+    }
+  ]
 }

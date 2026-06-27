@@ -1,5 +1,19 @@
 {
-"id":"D001",
-
-"name":"READY"
+  "data": [
+    {
+      "id": "D001",
+      "name": "READY",
+      "description": "Event siap dilaksanakan."
+    },
+    {
+      "id": "D002",
+      "name": "IMPROVEMENT",
+      "description": "Event memerlukan beberapa perbaikan."
+    },
+    {
+      "id": "D003",
+      "name": "NOT_READY",
+      "description": "Event belum layak dilaksanakan."
+    }
+  ]
 }

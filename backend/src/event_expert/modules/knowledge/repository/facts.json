@@ -1,13 +1,45 @@
 {
-  "id":"F001",
-
-  "category":"C01",
-
-  "business_rule":"BR-C01-001",
-
-  "name":"Izin keramaian telah diterbitkan",
-
-  "critical":true,
-
-  "evidence":"Surat izin keramaian"
+  "data": [
+    {
+      "id": "F001",
+      "category": "C01",
+      "name": "Izin keramaian tersedia",
+      "description": "Surat izin keramaian telah diterbitkan oleh pihak berwenang.",
+      "evidence": "Surat izin keramaian",
+      "critical": true
+    },
+    {
+      "id": "F002",
+      "category": "C01",
+      "name": "Izin penggunaan lokasi tersedia",
+      "description": "Penggunaan lokasi telah memperoleh izin resmi.",
+      "evidence": "Surat izin penggunaan lokasi",
+      "critical": true
+    },
+    {
+      "id": "F003",
+      "category": "C01",
+      "name": "Izin penggunaan jalan tersedia",
+      "description": "Penggunaan jalan telah memperoleh izin jika diperlukan.",
+      "evidence": "Surat izin penggunaan jalan",
+      "critical": false
+    },
+    {
+      "id": "F004",
+      "category": "C01",
+      "name": "Koordinasi dengan instansi terkait",
+      "description": "Panitia telah melakukan koordinasi dengan instansi terkait.",
+      "evidence": "Berita acara koordinasi",
+      "critical": false
+    },
+    {
+      "id": "F005",
+      "category": "C01",
+      "name": "Dokumen legal lengkap",
+      "description": "Seluruh dokumen legal penyelenggaraan telah tersedia.",
+      "evidence": "Dokumen legal",
+      "critical": true
+    }
+  ]
 }
+

@@ -1,9 +1,52 @@
 {
-"id":"REC001",
-
-"criteria":"RC01",
-
-"title":"Lengkapi Dokumen Perizinan",
-
-"description":"Pastikan seluruh izin telah diterbitkan."
+  "data": [
+    {
+      "id": "REC001",
+      "criteria": "RC01",
+      "title": "Lengkapi Dokumen Perizinan",
+      "description": "Pastikan seluruh dokumen perizinan telah diterbitkan sebelum pelaksanaan event."
+    },
+    {
+      "id": "REC002",
+      "criteria": "RC02",
+      "title": "Pastikan Kesiapan Venue",
+      "description": "Periksa kapasitas, akses, dan fasilitas venue."
+    },
+    {
+      "id": "REC003",
+      "criteria": "RC03",
+      "title": "Lengkapi Struktur SDM",
+      "description": "Tetapkan seluruh penanggung jawab divisi."
+    },
+    {
+      "id": "REC004",
+      "criteria": "RC04",
+      "title": "Perkuat Sistem Keamanan",
+      "description": "Sediakan APAR, petugas keamanan, dan jalur evakuasi."
+    },
+    {
+      "id": "REC005",
+      "criteria": "RC05",
+      "title": "Lengkapi Fasilitas Medis",
+      "description": "Sediakan tim medis, ambulans, dan perlengkapan P3K."
+    },
+    {
+      "id": "REC006",
+      "criteria": "RC06",
+      "title": "Lengkapi Logistik",
+      "description": "Pastikan seluruh logistik utama tersedia sebelum event."
+    },
+    {
+      "id": "REC007",
+      "criteria": "RC07",
+      "title": "Finalisasi Operasional",
+      "description": "Pastikan SOP dan rundown telah disetujui."
+    },
+    {
+      "id": "REC008",
+      "criteria": "RC08",
+      "title": "Perkuat Komunikasi",
+      "description": "Pastikan media komunikasi internal dan eksternal berjalan baik."
+    }
+  ]
 }
