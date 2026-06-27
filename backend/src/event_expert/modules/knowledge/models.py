@@ -111,12 +111,6 @@ class Fact(KnowledgeBaseModel):
 
     category: CategoryId
 
-    business_rule: str = Field(
-        ...,
-        min_length=1,
-        description="Business Rule identifier."
-    )
-
     name: str = Field(..., min_length=1)
 
     description: str = Field(..., min_length=1)
@@ -370,18 +364,9 @@ class InferenceResult(KnowledgeBaseModel):
     """
     Final inference result produced by the
     Forward Chaining Engine.
-
-    This object is shared between:
-
-    - Forward Chaining Engine
-    - Explanation Engine
-    - Recommendation Engine
-    - REST API
     """
-    success: bool = True
-    
     decision: Decision
-
+    
     matched_criteria: list[Criteria] = Field(
         default_factory=list
     )
@@ -394,8 +379,11 @@ class InferenceResult(KnowledgeBaseModel):
         default_factory=list
     )
 
+    missing_criteria: list[Criteria] = Field(
+        default_factory=list
+    )
+
     execution_time_ms: float = Field(
         default=0.0,
         ge=0,
-        description="Inference execution time."
     )

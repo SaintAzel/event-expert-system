@@ -101,24 +101,30 @@ class KnowledgeRepositoryValidator:
         self.category_rules: CategoryRuleRepository | None = None
 
         self.global_rules: GlobalRuleRepository | None = None
+    
+    # ======================================================
+    # Internal Helpers
+    # ======================================================
 
-        # ======================================================
-        # Internal Helpers
-        # ======================================================
+    def _add_error(
+        self,
+        message: str,
+    ) -> None:
+        """
+        Add validation error.
+        """
 
-        def _add_error(self, message: str) -> None:
-            """
-            Add validation error.
-            """
-            self._add_error(message)
+        self.result.errors.append(message)
 
+    def _add_warning(
+        self,
+        message: str,
+    ) -> None:
+        """
+        Add validation warning.
+        """
 
-        def _add_warning(self, message: str) -> None:
-            """
-            Add validation warning.
-            """
-            self._add_warning(message)
-
+        self.result.warnings.append(message)
 
     # ======================================================
     # Repository Loading
@@ -432,8 +438,7 @@ class KnowledgeRepositoryValidator:
 
         # Load Repository
         self._load_repositories()
-
-        self._load_repositories()
+        
         assert self.metadata is not None
 
         assert self.categories is not None

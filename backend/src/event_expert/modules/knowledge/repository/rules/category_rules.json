@@ -1,17 +1,84 @@
 {
-"id":"CR001",
-
-"priority":"critical",
-
-"conditions":[
-
-"F001",
-
-"F002",
-
-"F005"
-
-],
-
-"conclusion":"RC01"
+  "data": [
+    {
+      "id": "CR001",
+      "priority": "critical",
+      "conditions": [
+        "F001",
+        "F002",
+        "F005"
+      ],
+      "conclusion": "RC01"
+    },
+    {
+      "id": "CR002",
+      "priority": "critical",
+      "conditions": [
+        "F006",
+        "F007",
+        "F010"
+      ],
+      "conclusion": "RC02"
+    },
+    {
+      "id": "CR003",
+      "priority": "high",
+      "conditions": [
+        "F011",
+        "F012",
+        "F015"
+      ],
+      "conclusion": "RC03"
+    },
+    {
+      "id": "CR004",
+      "priority": "critical",
+      "conditions": [
+        "F016",
+        "F017",
+        "F020"
+      ],
+      "conclusion": "RC04"
+    },
+    {
+      "id": "CR005",
+      "priority": "critical",
+      "conditions": [
+        "F021",
+        "F022",
+        "F025"
+      ],
+      "conclusion": "RC05"
+    },
+    {
+      "id": "CR006",
+      "priority": "high",
+      "conditions": [
+        "F026",
+        "F027",
+        "F030"
+      ],
+      "conclusion": "RC06"
+    },
+    {
+      "id": "CR007",
+      "priority": "high",
+      "conditions": [
+        "F031",
+        "F032",
+        "F035"
+      ],
+      "conclusion": "RC07"
+    },
+    {
+      "id": "CR008",
+      "priority": "medium",
+      "conditions": [
+        "F036",
+        "F037",
+        "F040"
+      ],
+      "conclusion": "RC08"
+    }
+  ]
 }
