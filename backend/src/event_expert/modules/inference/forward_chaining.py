@@ -226,6 +226,10 @@ class ForwardChainingEngine:
 
             return decision
 
+        return self._decisions_by_id[
+            "D003"
+        ]
+
     # ======================================================
     # Result Builder
     # ======================================================
@@ -261,6 +265,7 @@ class ForwardChainingEngine:
             matched_criteria=matched_criteria,
             matched_rules=matched_rules,
             triggered_facts=triggered_facts,
+            missing_criteria=missing_criteria,
             execution_time_ms=execution_time_ms,
         )
     

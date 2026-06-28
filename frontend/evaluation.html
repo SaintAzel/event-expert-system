@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <!--======================================
+    Meta
+    =======================================-->
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>
+
+        Evalio | Event Evaluation
+
+    </title>
+
+    <!--======================================
+    Font
+    =======================================-->
+
+    <link
+        rel="preconnect"
+        href="https://fonts.googleapis.com"
+    >
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet"
+    >
+
+    <!--======================================
+    CSS
+    =======================================-->
+
+    <link
+        rel="stylesheet"
+        href="css/global.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="css/evaluation.css"
+    >
+
+</head>
+
+<body>
+
+    <!--======================================
+    Background
+    =======================================-->
+
+    <div class="background">
+
+        <canvas id="wave-canvas"></canvas>
+
+        <div class="ambient-glow glow-left"></div>
+
+        <div class="ambient-glow glow-right"></div>
+
+    </div>
+
+    <!--======================================
+    Evaluation Layout
+    =======================================-->
+
+    <main class="evaluation-layout">
+
+        <!--==================================
+        Sidebar
+        ===================================-->
+
+        <aside class="sidebar">
+
+            <!--==============================
+            Brand
+            ==============================-->
+
+            <section class="brand">
+
+                <img
+                    src="assets/images/logo/evalio-logo2.png"
+                    alt="Evalio"
+                    class="brand-logo"
+                >
+
+                <div class="brand-info">
+
+                    <h1>
+
+                        Evalio
+
+                    </h1>
+
+                    <p>
+
+                        Event Readiness
+                        Expert System
+
+                    </p>
+
+                </div>
+
+            </section>
+
+            <!--==============================
+            Progress Card
+            ==============================-->
+
+            <section class="progress-card">
+
+                <!-- Progress -->
+
+                <h2 class="progress-title">
+
+                    Progress Evaluasi
+
+                </h2>
+
+                <div class="progress-ring">
+
+                    <svg
+                        id="progress-svg"
+                        viewBox="0 0 180 180">
+
+                        <defs>
+                            <linearGradient
+                                id="progressGradient"
+                                x1="0%"
+                                y1="0%"
+                                x2="100%"
+                                y2="100%"
+                            >
+                                <stop
+                                    offset="0%"
+                                    stop-color="#FFD646"
+                                ></stop>
+                                <stop
+                                    offset="55%"
+                                    stop-color="#FF9A1F"
+                                ></stop>
+                                <stop
+                                    offset="100%"
+                                    stop-color="#FF5E11"
+                                ></stop>
+                            </linearGradient>
+                        </defs>
+
+                        <circle
+                            class="ring-track"
+                            cx="90"
+                            cy="90"
+                            r="70"
+                        ></circle>
+
+                        <circle
+                            class="ring-value"
+                            cx="90"
+                            cy="90"
+                            r="70"
+                        ></circle>
+
+                    </svg>
+
+                    <div class="progress-center">
+
+                        <h2 id="progress-percent">
+
+                            0%
+
+                        </h2>
+
+                        <span>
+
+                            0 / 8
+                            <small>Kategori</small>
+
+                        </span>
+
+                    </div>
+
+                </div>
+
+                <!-- Timeline -->
+
+                <div class="timeline">
+
+                    <div class="timeline-item active">
+
+                        <span class="timeline-dot"></span>
+
+                        <span class="timeline-copy">
+
+                            <strong>Checklist</strong>
+                            <small>Isi kondisi event Anda</small>
+
+                        </span>
+
+                    </div>
+
+                    <div class="timeline-line"></div>
+
+                    <div class="timeline-item">
+
+                        <span class="timeline-dot"></span>
+
+                        <span class="timeline-copy">
+
+                            <strong>Evaluasi</strong>
+                            <small>Sistem memproses data</small>
+
+                        </span>
+
+                    </div>
+
+                    <div class="timeline-line"></div>
+
+                    <div class="timeline-item">
+
+                        <span class="timeline-dot"></span>
+
+                        <span class="timeline-copy">
+
+                            <strong>Hasil</strong>
+                            <small>Lihat hasil penilaian</small>
+
+                        </span>
+
+                    </div>
+
+                </div>
+
+                <div class="security-note">
+
+                    <i data-lucide="shield-check"></i>
+
+                    <div>
+
+                        <strong>Data Anda aman</strong>
+
+                        <p>
+
+                            Semua data hanya digunakan untuk proses evaluasi.
+
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+            <!--==============================
+            Back Button
+            ==============================-->
+
+            <button
+                class="back-button"
+                id="back-button"
+            >
+
+                <i data-lucide="arrow-left"></i>
+
+                <span>
+
+                    Back
+
+                </span>
+
+            </button>
+
+        </aside>
+
+        <!--==================================
+        Main
+        ===================================-->
+
+        <section class="main-content">
+
+            <!--==============================
+            Header
+            ==============================-->
+
+            <header class="page-header">
+
+                <div class="header-left">
+
+                    <span class="header-badge">
+
+                        8 Kategori Penilaian
+
+                    </span>
+
+                    <h1>
+
+                        Evaluasi
+                        <span>Event</span>
+
+                    </h1>
+
+                    <p>
+
+                        Pilih kondisi event Anda dengan checklist di bawah ini.
+                        Semakin lengkap, semakin akurat hasil penilaiannya.
+
+                    </p>
+
+                </div>
+
+                <div class="header-right">
+
+                    <div class="information-card">
+
+                        <i
+                            data-lucide="info"
+                        ></i>
+
+                        <div>
+
+                            <h4>
+
+                                Information
+
+                            </h4>
+
+                            <p>
+
+                                Pilih semua yang sesuai
+                                dengan kondisi event Anda
+                                sebelum melakukan evaluasi.
+
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </header>
+
+            <!--==============================
+            Accordion
+            ==============================-->
+
+            <section
+                class="accordion-container"
+                id="accordion-container"
+            >
+
+            </section>
+
+            <!--==============================
+            Footer
+            ==============================-->
+
+            <footer class="footer-action">
+
+                <button
+                    class="evaluate-button"
+                    id="evaluate-button"
+                >
+
+                    <span>
+
+                        Evaluasi Sekarang
+
+                    </span>
+
+                    <i
+                        data-lucide="arrow-right"
+                    ></i>
+
+                </button>
+
+            </footer>
+
+        </section>
+
+    </main>
+
+    <!--======================================
+    Scripts
+    =======================================-->
+
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <script>
+
+        lucide.createIcons();
+
+    </script>
+
+    <script src="js/evaluation.js"></script>
+
+</body>
+
+</html>

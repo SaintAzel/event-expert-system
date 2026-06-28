@@ -1,0 +1,356 @@
+{
+  "categories": [
+    {
+      "id": "C01",
+      "name": "Perizinan",
+      "description": "Legalitas dan dokumen perizinan event",
+      "icon": "file-text",
+      "priority": "critical",
+      "facts": [
+        {
+          "id": "F001",
+          "question": "Izin keramaian tersedia",
+          "description": "Surat izin keramaian telah diterbitkan oleh pihak berwenang.",
+          "evidence": "Surat izin keramaian",
+          "critical": true
+        },
+        {
+          "id": "F002",
+          "question": "Izin penggunaan lokasi tersedia",
+          "description": "Penggunaan lokasi telah memperoleh izin resmi.",
+          "evidence": "Surat izin penggunaan lokasi",
+          "critical": true
+        },
+        {
+          "id": "F003",
+          "question": "Izin penggunaan jalan tersedia",
+          "description": "Penggunaan jalan telah memperoleh izin jika diperlukan.",
+          "evidence": "Surat izin penggunaan jalan",
+          "critical": false
+        },
+        {
+          "id": "F004",
+          "question": "Koordinasi dengan instansi terkait",
+          "description": "Panitia telah melakukan koordinasi dengan instansi terkait.",
+          "evidence": "Berita acara koordinasi",
+          "critical": false
+        },
+        {
+          "id": "F005",
+          "question": "Dokumen legal lengkap",
+          "description": "Seluruh dokumen legal penyelenggaraan telah tersedia.",
+          "evidence": "Dokumen legal",
+          "critical": true
+        }
+      ]
+    },
+    {
+      "id": "C02",
+      "name": "Venue",
+      "description": "Kesiapan lokasi dan fasilitas penyelenggaraan",
+      "icon": "map-pinned",
+      "priority": "critical",
+      "facts": [
+        {
+          "id": "F006",
+          "question": "Venue telah ditentukan",
+          "description": "Lokasi penyelenggaraan event telah ditetapkan dan dapat digunakan.",
+          "evidence": "Dokumen penetapan atau kontrak venue",
+          "critical": true
+        },
+        {
+          "id": "F007",
+          "question": "Kapasitas venue sesuai jumlah peserta",
+          "description": "Kapasitas venue mampu menampung seluruh peserta sesuai rencana penyelenggaraan.",
+          "evidence": "Data kapasitas venue",
+          "critical": true
+        },
+        {
+          "id": "F008",
+          "question": "Area parkir memadai",
+          "description": "Area parkir tersedia dan mampu menampung kendaraan peserta maupun panitia.",
+          "evidence": "Hasil survei lokasi",
+          "critical": false
+        },
+        {
+          "id": "F009",
+          "question": "Fasilitas sanitasi tersedia",
+          "description": "Venue memiliki fasilitas sanitasi yang memadai untuk peserta dan panitia.",
+          "evidence": "Hasil inspeksi venue",
+          "critical": false
+        },
+        {
+          "id": "F010",
+          "question": "Jalur evakuasi tersedia",
+          "description": "Venue memiliki jalur evakuasi yang jelas dan dapat digunakan pada kondisi darurat.",
+          "evidence": "Denah jalur evakuasi atau hasil inspeksi",
+          "critical": true
+        }
+      ]
+    },
+    {
+      "id": "C03",
+      "name": "Sumber Daya Manusia",
+      "description": "Kesiapan panitia dan sumber daya manusia",
+      "icon": "users",
+      "priority": "high",
+      "facts": [
+        {
+          "id": "F011",
+          "question": "Struktur organisasi panitia telah ditetapkan",
+          "description": "Panitia penyelenggara telah memiliki struktur organisasi yang jelas beserta pembagian divisinya.",
+          "evidence": "Dokumen struktur organisasi panitia",
+          "critical": true
+        },
+        {
+          "id": "F012",
+          "question": "Penanggung jawab setiap divisi telah ditetapkan",
+          "description": "Setiap divisi memiliki penanggung jawab yang ditetapkan secara resmi.",
+          "evidence": "SK panitia atau daftar penanggung jawab",
+          "critical": true
+        },
+        {
+          "id": "F013",
+          "question": "Panitia telah mengikuti briefing atau pelatihan",
+          "description": "Panitia telah memperoleh briefing atau pelatihan mengenai pelaksanaan event.",
+          "evidence": "Daftar hadir briefing atau dokumentasi pelatihan",
+          "critical": false
+        },
+        {
+          "id": "F014",
+          "question": "Daftar tugas setiap divisi telah terdokumentasi",
+          "description": "Tugas dan tanggung jawab setiap divisi telah didokumentasikan secara jelas.",
+          "evidence": "Dokumen job description panitia",
+          "critical": false
+        },
+        {
+          "id": "F015",
+          "question": "Jumlah panitia sesuai kebutuhan event",
+          "description": "Jumlah personel panitia telah memenuhi kebutuhan penyelenggaraan event.",
+          "evidence": "Daftar panitia dan perencanaan kebutuhan SDM",
+          "critical": true
+        }
+      ]
+    },
+    {
+      "id": "C04",
+      "name": "Keamanan",
+      "description": "Keamanan dan mitigasi risiko event",
+      "icon": "shield-check",
+      "priority": "critical",
+      "facts": [
+        {
+          "id": "F016",
+          "question": "Petugas keamanan telah ditetapkan",
+          "description": "Panitia telah menetapkan petugas keamanan yang bertugas selama penyelenggaraan event.",
+          "evidence": "Daftar petugas keamanan",
+          "critical": true
+        },
+        {
+          "id": "F017",
+          "question": "Rencana pengamanan telah disusun",
+          "description": "Dokumen rencana pengamanan telah disusun dan disetujui oleh penyelenggara.",
+          "evidence": "Dokumen rencana pengamanan",
+          "critical": true
+        },
+        {
+          "id": "F018",
+          "question": "Peralatan pemadam kebakaran tersedia",
+          "description": "Peralatan pemadam kebakaran tersedia dan siap digunakan selama event berlangsung.",
+          "evidence": "Hasil inspeksi perlengkapan keamanan",
+          "critical": false
+        },
+        {
+          "id": "F019",
+          "question": "Area keamanan telah diberi penanda",
+          "description": "Area penting seperti jalur evakuasi, titik kumpul, dan area terbatas telah diberi penanda yang jelas.",
+          "evidence": "Hasil inspeksi lokasi",
+          "critical": false
+        },
+        {
+          "id": "F020",
+          "question": "Prosedur evakuasi darurat telah ditetapkan",
+          "description": "Prosedur evakuasi darurat telah disusun dan dipahami oleh panitia.",
+          "evidence": "Dokumen prosedur evakuasi",
+          "critical": true
+        }
+      ]
+    },
+    {
+      "id": "C05",
+      "name": "Medis",
+      "description": "Kesiapan layanan kesehatan dan medis",
+      "icon": "heart-pulse",
+      "priority": "critical",
+      "facts": [
+        {
+          "id": "F021",
+          "question": "Tim medis telah ditetapkan",
+          "description": "Penyelenggara telah menetapkan tim medis yang bertugas selama event berlangsung.",
+          "evidence": "Daftar petugas medis",
+          "critical": true
+        },
+        {
+          "id": "F022",
+          "question": "Peralatan P3K tersedia",
+          "description": "Peralatan pertolongan pertama tersedia dan siap digunakan selama penyelenggaraan event.",
+          "evidence": "Daftar inventaris P3K atau hasil inspeksi",
+          "critical": true
+        },
+        {
+          "id": "F023",
+          "question": "Ambulans atau kendaraan evakuasi medis tersedia",
+          "description": "Ambulans atau kendaraan evakuasi medis telah disiapkan apabila diperlukan.",
+          "evidence": "Dokumen kerja sama atau hasil inspeksi",
+          "critical": false
+        },
+        {
+          "id": "F024",
+          "question": "Rumah sakit atau fasilitas kesehatan rujukan telah ditentukan",
+          "description": "Penyelenggara telah menentukan rumah sakit atau fasilitas kesehatan sebagai rujukan keadaan darurat.",
+          "evidence": "Dokumen koordinasi atau surat kerja sama",
+          "critical": false
+        },
+        {
+          "id": "F025",
+          "question": "Prosedur penanganan keadaan darurat medis telah disusun",
+          "description": "SOP penanganan keadaan darurat medis telah tersedia dan dipahami oleh panitia.",
+          "evidence": "Dokumen SOP penanganan medis",
+          "critical": true
+        }
+      ]
+    },
+    {
+      "id": "C06",
+      "name": "Logistik",
+      "description": "Kesiapan logistik dan perlengkapan",
+      "icon": "package",
+      "priority": "high",
+      "facts": [
+        {
+          "id": "F026",
+          "question": "Perlengkapan utama event telah tersedia",
+          "description": "Seluruh perlengkapan utama yang dibutuhkan untuk penyelenggaraan event telah tersedia.",
+          "evidence": "Daftar perlengkapan utama atau hasil inspeksi",
+          "critical": true
+        },
+        {
+          "id": "F027",
+          "question": "Peralatan pendukung operasional telah tersedia",
+          "description": "Seluruh peralatan pendukung operasional telah tersedia sesuai kebutuhan event.",
+          "evidence": "Checklist perlengkapan operasional",
+          "critical": true
+        },
+        {
+          "id": "F028",
+          "question": "Inventaris logistik telah didokumentasikan",
+          "description": "Seluruh logistik telah dicatat dalam daftar inventaris.",
+          "evidence": "Dokumen inventaris logistik",
+          "critical": false
+        },
+        {
+          "id": "F029",
+          "question": "Pemeriksaan kelayakan perlengkapan telah dilakukan",
+          "description": "Perlengkapan event telah diperiksa untuk memastikan seluruhnya dalam kondisi layak digunakan.",
+          "evidence": "Checklist inspeksi perlengkapan",
+          "critical": false
+        },
+        {
+          "id": "F030",
+          "question": "Distribusi logistik telah direncanakan",
+          "description": "Jadwal dan mekanisme distribusi logistik telah disusun sebelum pelaksanaan event.",
+          "evidence": "Dokumen rencana distribusi logistik",
+          "critical": true
+        }
+      ]
+    },
+    {
+      "id": "C07",
+      "name": "Operasional",
+      "description": "Kesiapan operasional pelaksanaan",
+      "icon": "settings",
+      "priority": "high",
+      "facts": [
+        {
+          "id": "F031",
+          "question": "Rundown acara telah disusun",
+          "description": "Rundown kegiatan telah disusun sebagai pedoman pelaksanaan event.",
+          "evidence": "Dokumen rundown acara",
+          "critical": true
+        },
+        {
+          "id": "F032",
+          "question": "Standar Operasional Prosedur (SOP) telah disusun",
+          "description": "Standar Operasional Prosedur telah disusun sebagai acuan pelaksanaan tugas panitia.",
+          "evidence": "Dokumen SOP penyelenggaraan",
+          "critical": true
+        },
+        {
+          "id": "F033",
+          "question": "Jadwal persiapan telah disusun",
+          "description": "Timeline persiapan kegiatan telah disusun sebelum pelaksanaan event.",
+          "evidence": "Dokumen timeline kegiatan",
+          "critical": false
+        },
+        {
+          "id": "F034",
+          "question": "Simulasi atau gladi pelaksanaan telah dilakukan",
+          "description": "Panitia telah melaksanakan simulasi atau gladi untuk memastikan kesiapan operasional.",
+          "evidence": "Berita acara atau dokumentasi gladi",
+          "critical": false
+        },
+        {
+          "id": "F035",
+          "question": "Koordinasi akhir seluruh panitia telah dilaksanakan",
+          "description": "Final briefing atau technical meeting telah dilaksanakan sebelum event dimulai.",
+          "evidence": "Notulen rapat atau daftar hadir koordinasi",
+          "critical": true
+        }
+      ]
+    },
+    {
+      "id": "C08",
+      "name": "Komunikasi",
+      "description": "Komunikasi internal dan informasi peserta",
+      "icon": "megaphone",
+      "priority": "medium",
+      "facts": [
+        {
+          "id": "F036",
+          "question": "Media komunikasi internal telah ditentukan",
+          "description": "Panitia telah menetapkan media komunikasi resmi yang digunakan selama penyelenggaraan event.",
+          "evidence": "Dokumentasi media komunikasi atau grup koordinasi",
+          "critical": true
+        },
+        {
+          "id": "F037",
+          "question": "Daftar kontak penting telah tersedia",
+          "description": "Daftar kontak panitia inti, petugas keamanan, tim medis, vendor, dan pihak terkait telah tersedia.",
+          "evidence": "Dokumen daftar kontak penting",
+          "critical": true
+        },
+        {
+          "id": "F038",
+          "question": "Media informasi peserta telah disiapkan",
+          "description": "Media informasi bagi peserta seperti banner, media sosial, website, atau aplikasi event telah disiapkan.",
+          "evidence": "Dokumentasi media informasi",
+          "critical": false
+        },
+        {
+          "id": "F039",
+          "question": "Prosedur komunikasi darurat telah ditetapkan",
+          "description": "Prosedur komunikasi pada kondisi darurat telah disusun dan dipahami oleh panitia.",
+          "evidence": "Dokumen prosedur komunikasi darurat",
+          "critical": false
+        },
+        {
+          "id": "F040",
+          "question": "Mekanisme penyampaian informasi kepada peserta telah disiapkan",
+          "description": "Mekanisme penyampaian informasi kepada peserta telah ditetapkan sebelum pelaksanaan event.",
+          "evidence": "Dokumen prosedur komunikasi peserta",
+          "critical": true
+        }
+      ]
+    }
+  ]
+}

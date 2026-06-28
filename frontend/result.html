@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+
+<html lang="id">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>
+        Evalio | Hasil Evaluasi
+    </title>
+
+    <link
+        rel="preconnect"
+        href="https://fonts.googleapis.com"
+    >
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet"
+    >
+
+    <link
+        rel="stylesheet"
+        href="css/global.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="css/result.css"
+    >
+
+</head>
+
+<body>
+
+    <div class="result-background">
+        <canvas id="wave-canvas"></canvas>
+        <div class="result-glow result-glow-left"></div>
+        <div class="result-glow result-glow-right"></div>
+    </div>
+
+    <main class="result-page">
+
+        <header class="result-topbar">
+            <a
+                class="result-brand"
+                href="index.html"
+                aria-label="Evalio Beranda"
+            >
+                <img
+                    src="assets/images/logo/evalio-logo2.png"
+                    alt="Evalio"
+                >
+                <span>Evalio</span>
+            </a>
+
+            <button
+                class="new-evaluation-button"
+                id="new-evaluation-button"
+                type="button"
+            >
+                <i data-lucide="refresh-cw"></i>
+                <span>Evaluasi Baru</span>
+            </button>
+        </header>
+
+        <section class="result-layout">
+
+            <aside class="result-sidebar">
+
+                <section class="status-card glass-panel">
+                    <p class="section-kicker">Hasil Evaluasi</p>
+
+                    <div class="status-heading">
+                        <div class="status-icon" id="status-icon">
+                            <i data-lucide="check"></i>
+                        </div>
+
+                        <div>
+                            <h1 id="decision-title">READY</h1>
+                            <p id="decision-subtitle">
+                                Event Siap Diselenggarakan
+                            </p>
+                        </div>
+                    </div>
+
+                    <p
+                        class="status-description"
+                        id="decision-description"
+                    >
+                        Berdasarkan analisis sistem pakar, event Anda telah
+                        memenuhi kriteria kesiapan dengan risiko rendah.
+                    </p>
+
+                    <div class="readiness-ring">
+                        <svg viewBox="0 0 220 220">
+                            <defs>
+                                <linearGradient
+                                    id="readiness-gradient"
+                                    x1="0%"
+                                    y1="0%"
+                                    x2="100%"
+                                    y2="100%"
+                                >
+                                    <stop
+                                        offset="0%"
+                                        stop-color="#68F05D"
+                                    ></stop>
+                                    <stop
+                                        offset="58%"
+                                        stop-color="#B7EE28"
+                                    ></stop>
+                                    <stop
+                                        offset="100%"
+                                        stop-color="#FFB21F"
+                                    ></stop>
+                                </linearGradient>
+                            </defs>
+
+                            <circle
+                                class="score-track"
+                                cx="110"
+                                cy="110"
+                                r="88"
+                            ></circle>
+
+                            <circle
+                                class="score-value"
+                                id="score-ring"
+                                cx="110"
+                                cy="110"
+                                r="88"
+                            ></circle>
+                        </svg>
+
+                        <div class="ring-copy">
+                            <strong id="score-percent">87%</strong>
+                            <span>Skor Kesiapan</span>
+                            <small id="risk-pill">Risiko Rendah</small>
+                        </div>
+                    </div>
+
+                    <div class="metric-grid">
+                        <article class="metric-card">
+                            <div class="metric-icon green">
+                                <i data-lucide="clipboard-list"></i>
+                            </div>
+                            <div>
+                                <strong id="facts-score">35 / 40</strong>
+                                <span>Fakta Terpenuhi</span>
+                                <small id="facts-percent">87.5%</small>
+                            </div>
+                        </article>
+
+                        <article class="metric-card">
+                            <div class="metric-icon orange">
+                                <i data-lucide="crosshair"></i>
+                            </div>
+                            <div>
+                                <strong id="categories-score">7 / 8</strong>
+                                <span>Kategori Terpenuhi</span>
+                                <small id="categories-percent">87.5%</small>
+                            </div>
+                        </article>
+
+                        <article class="metric-card">
+                            <div class="metric-icon blue">
+                                <i data-lucide="shield"></i>
+                            </div>
+                            <div>
+                                <span>Tingkat Risiko</span>
+                                <strong id="risk-level">RENDAH</strong>
+                                <small id="risk-label">Low Risk</small>
+                            </div>
+                        </article>
+
+                        <article class="metric-card">
+                            <div class="metric-icon purple">
+                                <i data-lucide="calendar-days"></i>
+                            </div>
+                            <div>
+                                <span>Waktu Evaluasi</span>
+                                <strong id="evaluation-date">27 Mei 2025</strong>
+                                <small id="evaluation-time">14:32 WIB</small>
+                            </div>
+                        </article>
+                    </div>
+                </section>
+
+                <section class="summary-card glass-panel">
+                    <h2>
+                        <i data-lucide="sparkles"></i>
+                        Ringkasan Hasil
+                    </h2>
+                    <p id="summary-text">
+                        Sebagian besar aspek event telah terpenuhi dengan baik.
+                    </p>
+                </section>
+
+            </aside>
+
+            <section class="result-content">
+
+                <h2 class="content-title">Detail Hasil Evaluasi</h2>
+
+                <section class="detail-panel glass-panel">
+                    <h3>
+                        <i data-lucide="check-circle-2"></i>
+                        Kriteria yang Terpenuhi
+                    </h3>
+
+                    <div
+                        class="criteria-grid"
+                        id="criteria-grid"
+                    ></div>
+                </section>
+
+                <section class="detail-panel glass-panel">
+                    <div class="panel-heading">
+                        <i data-lucide="lightbulb"></i>
+                        <div>
+                            <h3>Rekomendasi Perbaikan</h3>
+                            <p>
+                                Beberapa hal yang disarankan untuk peningkatan
+                                event Anda.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div
+                        class="recommendation-list"
+                        id="recommendation-list"
+                    ></div>
+                </section>
+
+                <section class="detail-panel inference-panel glass-panel">
+                    <div class="panel-heading purple-heading">
+                        <i data-lucide="git-branch"></i>
+                        <div>
+                            <h3>Jejak Inferensi (Ringkasan)</h3>
+                            <p>
+                                Berdasarkan fakta yang Anda pilih, sistem
+                                menyimpulkan:
+                            </p>
+                        </div>
+                    </div>
+
+                    <div
+                        class="inference-flow"
+                        id="inference-flow"
+                    ></div>
+                </section>
+
+                <footer class="result-actions">
+                    <button
+                        class="report-button"
+                        id="download-report-button"
+                        type="button"
+                    >
+                        <i data-lucide="download"></i>
+                        <span>Unduh Laporan (PDF)</span>
+                    </button>
+
+                    <button
+                        class="home-button"
+                        id="home-button"
+                        type="button"
+                    >
+                        <i data-lucide="home"></i>
+                        <span>Kembali ke Beranda</span>
+                    </button>
+                </footer>
+
+            </section>
+
+        </section>
+
+    </main>
+
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script src="js/result.js"></script>
+
+</body>
+
+</html>

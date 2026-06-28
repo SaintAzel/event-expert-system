@@ -1,0 +1,380 @@
+/*
+========================================
+Evalio Global Styles
+Version : 1.0
+Sprint A
+========================================
+*/
+
+@import url("./variables.css");
+@import url("./reset.css");
+
+/*==================================
+Base
+==================================*/
+
+body{
+
+    font-family:var(--font-family);
+
+    background:var(--background);
+
+    color:var(--text);
+
+    overflow-x:hidden;
+
+    position:relative;
+
+}
+
+/*==================================
+Container
+==================================*/
+
+.container{
+
+    width:min(
+
+        var(--container),
+
+        calc(100% - 48px)
+
+    );
+
+    margin-inline:auto;
+
+}
+
+/*==================================
+Typography
+==================================*/
+
+.title{
+
+    font-size:var(--fs-5xl);
+
+    font-weight:var(--fw-black);
+
+    line-height:1;
+
+    letter-spacing:-2px;
+
+}
+
+.subtitle{
+
+    font-size:var(--fs-2xl);
+
+    font-weight:var(--fw-bold);
+
+    line-height:1.2;
+
+}
+
+.description{
+
+    font-size:var(--fs-lg);
+
+    color:var(--text-secondary);
+
+    line-height:1.9;
+
+}
+
+.text-center{
+
+    text-align:center;
+
+}
+
+/*==================================
+Badge
+==================================*/
+
+.badge{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    gap:10px;
+
+    padding:
+
+        10px
+
+        18px;
+
+    border-radius:var(--radius-pill);
+
+    background:var(--glass);
+
+    border:1px solid var(--border);
+
+    backdrop-filter:
+
+        blur(var(--blur-glass));
+
+    font-size:.9rem;
+
+    color:var(--text-secondary);
+
+}
+
+/*==================================
+Buttons
+==================================*/
+
+.btn{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    gap:14px;
+
+    cursor:pointer;
+
+    user-select:none;
+
+    transition:var(--transition);
+
+}
+
+.btn-primary{
+
+    background:var(--gradient-primary);
+
+    color:#101010;
+
+    border-radius:var(--radius-pill);
+
+    font-weight:var(--fw-semibold);
+
+    box-shadow:var(--shadow-glow);
+
+}
+
+.btn-primary:hover{
+
+    transform:translateY(-4px);
+
+}
+
+/*==================================
+Glass Card
+==================================*/
+
+.glass{
+
+    background:
+
+        var(--glass);
+
+    backdrop-filter:
+
+        blur(var(--blur-glass));
+
+    border:
+
+        1px solid var(--border);
+
+    box-shadow:
+
+        var(--shadow-card);
+
+}
+
+/*==================================
+Card
+==================================*/
+
+.card{
+
+    border-radius:
+
+        var(--radius-lg);
+
+}
+
+/*==================================
+Grid
+==================================*/
+
+.grid{
+
+    display:grid;
+
+}
+
+.grid-2{
+
+    grid-template-columns:
+
+        repeat(4,1fr);
+
+}
+
+.grid-3{
+
+    grid-template-columns:
+
+        repeat(3,1fr);
+
+}
+
+.grid-4{
+
+    grid-template-columns:
+
+        repeat(4,1fr);
+
+}
+
+.gap-1{
+
+    gap:var(--space-2);
+
+}
+
+.gap-2{
+
+    gap:var(--space-3);
+
+}
+
+.gap-3{
+
+    gap:var(--space-4);
+
+}
+
+/*==================================
+Flex
+==================================*/
+
+.flex{
+
+    display:flex;
+
+}
+
+.flex-column{
+
+    flex-direction:column;
+
+}
+
+.items-center{
+
+    align-items:center;
+
+}
+
+.justify-center{
+
+    justify-content:center;
+
+}
+
+.justify-between{
+
+    justify-content:space-between;
+
+}
+
+/*==================================
+Utilities
+==================================*/
+
+.hidden{
+
+    display:none;
+
+}
+
+.w-full{
+
+    width:100%;
+
+}
+
+.h-full{
+
+    height:100%;
+
+}
+
+.relative{
+
+    position:relative;
+
+}
+
+.absolute{
+
+    position:absolute;
+
+}
+
+.overflow-hidden{
+
+    overflow:hidden;
+
+}
+
+/*==================================
+Responsive
+==================================*/
+
+@media(max-width:992px){
+
+    .grid-4{
+
+        grid-template-columns:
+
+            repeat(2,1fr);
+
+    }
+
+}
+
+@media(max-width:768px){
+
+    .container{
+
+        width:min(
+
+            100% - 32px,
+
+            var(--container)
+
+        );
+
+    }
+
+    .grid-2,
+    .grid-3,
+    .grid-4{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .title{
+
+        font-size:3.2rem;
+
+    }
+
+    .subtitle{
+
+        font-size:2rem;
+
+    }
+
+}
